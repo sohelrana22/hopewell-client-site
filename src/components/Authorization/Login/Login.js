@@ -13,12 +13,12 @@ const Login = () => {
   return (
     <div className="bg-cyan-50 ">
       <div className="flex items-center justify-center min-h-screen">
-        <div className="max-w-lg mx-auto rounded shadow-xl shadow-cyan-200 overflow-hidden py-10 px-20 bg-white relative z-1">
+        <div className="max-w-lg mx-auto rounded shadow-xl shadow-cyan-200 overflow-hidden py-10 px-32 bg-white relative z-1">
           <div
             onClick={() => history.push("/")}
             className="absolute top-2 right-0 btn px-4"
           >
-            <GrClose size="1.5em" color="#05B6D3" />
+            <GrClose size="1.5em" className="text-cyan-500" />
           </div>
           <form className="space-y-6">
             <div className="">
@@ -34,15 +34,9 @@ const Login = () => {
                   id="email"
                   name="email"
                   type="email"
-                  className="h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-cyan-500 focus:ring-0 border-0"
-                  placeholder="john@doe.com"
+                  className="input-field"
+                  placeholder="Your Email"
                 />
-                <label
-                  htmlFor="email"
-                  className="absolute left-0 top-3 text-gray-600 text-sm transition-all"
-                >
-                  Your Email
-                </label>
               </div>
 
               <div className="relative col-span-6">
@@ -52,14 +46,9 @@ const Login = () => {
                   type="password"
                   name="password"
                   placeholder="12345"
-                  className="h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-cyan-500 focus:ring-0 border-0"
+                  className="input-field"
+                  placeholder="Your Password"
                 />
-                <label
-                  htmlFor="password"
-                  className="absolute left-0 top-3 text-gray-600 text-sm transition-all"
-                >
-                  Your Password
-                </label>
               </div>
             </div>
 

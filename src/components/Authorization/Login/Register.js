@@ -13,7 +13,7 @@ const Register = () => {
   return (
     <div className="bg-cyan-50">
       <div className="flex items-center justify-center min-h-screen">
-        <div className="max-w-lg mx-auto rounded shadow-xl overflow-hidden py-10 px-20 bg bg-white relative z-2">
+        <div className="max-w-lg mx-auto shadow-xl shadow-cyan-200 overflow-hidden py-10 px-20 bg-white relative z-2">
           <div
             onClick={() => history.push("/")}
             className="absolute top-2 right-0 btn px-4"
@@ -29,66 +29,44 @@ const Register = () => {
             </div>
 
             <div className="grid items-center grid-cols-6 gap-6 space-y-2">
-              <div className="relative col-span-6 md:col-span-3">
+              <div className="col-span-6 md:col-span-3">
                 <input
                   id="fName"
                   name="fName"
                   type="name"
-                  className="h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-cyan-500 focus:ring-0 border-0"
-                  placeholder="john@doe.com"
+                  className="input-field"
+                  placeholder="First Name"
                 />
-                <label
-                  htmlFor="fName"
-                  className="absolute left-0 top-3 text-gray-600 text-sm transition"
-                >
-                  First Name
-                </label>
               </div>
-              <div className="relative col-span-6 md:col-span-3">
+              <div className="col-span-6 md:col-span-3">
                 <input
                   id="lName"
                   name="lName"
                   type="name"
-                  className="h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-cyan-500 focus:ring-0 border-0"
+                  className="input-field"
+                  placeholder="Last Name"
                 />
-                <label
-                  htmlFor="lName"
-                  className="absolute left-0 top-3 text-gray-600 text-sm transition-all"
-                >
-                  Last Name
-                </label>
               </div>
 
-              <div className="relative col-span-6">
+              <div className="col-span-6">
                 <input
                   id="email"
                   name="email"
                   type="email"
-                  className="h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-cyan-500 focus:ring-0 border-0"
+                  className="input-field"
+                  placeholder="Email Address"
                 />
-                <label
-                  htmlFor="email"
-                  className="absolute left-0 top-3 text-gray-600 text-sm transition-all"
-                >
-                  Email address
-                </label>
               </div>
 
-              <div className="relative col-span-6">
+              <div className="col-span-6">
                 <input
                   required
                   type="password"
                   name="password"
                   id="password"
-                  placeholder=" "
-                  className="h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-cyan-500 focus:ring-0 border-0"
+                  className="input-field"
+                  placeholder="Your Password"
                 />
-                <label
-                  htmlFor="password"
-                  className="absolute left-0 top-3 text-gray-600 text-sm transition-all"
-                >
-                  Password
-                </label>
               </div>
             </div>
 
@@ -101,7 +79,7 @@ const Register = () => {
             <p className="text-center">
               Already registered?
               <Link
-                className="text-cyan-500 hover:text-cyan-500 no-underline"
+                className="text-cyan-500 hover:text-cyan-400 no-underline ml-2"
                 to="/login"
               >
                 Login

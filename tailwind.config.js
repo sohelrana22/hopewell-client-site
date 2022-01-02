@@ -4,13 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        raleway: ["Raleway", "sans-serif"],
+        display: ["Raleway", "sans-serif"],
+        body: ["Raleway", "sans-serif"],
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/forms")({
-      strategy: "class",
-    }),
-  ],
+  plugins: [require("@tailwindcss/forms")],
 };
