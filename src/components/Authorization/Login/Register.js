@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { GrClose } from "react-icons/gr";
-import { Link, useHistory } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   //Dynamic Title
   useEffect(() => {
@@ -15,7 +15,7 @@ const Register = () => {
       <div className="flex items-center justify-center min-h-screen">
         <div className="max-w-lg mx-auto shadow-xl shadow-cyan-200 overflow-hidden py-10 px-20 bg-white relative z-2">
           <div
-            onClick={() => history.push("/")}
+            onClick={() => navigate("/")}
             className="absolute top-2 right-0 btn px-4"
           >
             <GrClose size="1.5em" />
