@@ -1,13 +1,29 @@
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { GrClose } from "react-icons/gr";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Register = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const { registerUser, authError } = useAuth();
+  const location = useLocation();
   const navigate = useNavigate();
-
+  const redirectUrl = location.state?.from?.pathname || "/";
+  const onSubmit = (data) => {
+    const userdata = {
+      name: data.firstName + data.lastName,
+      email: data.email,
+      password: data.password,
+    };
+    registerUser(
+      userdata.email,
+      userdata.password,
+      userdata.name,
+      navigate,
+      redirectUrl
+    );
+  };
   //Dynamic Title
   useEffect(() => {
     document.title = "Register | Hopewell Hospital";
