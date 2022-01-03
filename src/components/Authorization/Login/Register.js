@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
+import { useForm } from "react-hook-form";
 import { GrClose } from "react-icons/gr";
-import { Link,  useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => console.log(data);
   const navigate = useNavigate();
 
   //Dynamic Title
@@ -20,7 +23,7 @@ const Register = () => {
           >
             <GrClose size="1.5em" />
           </div>
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
             <div className="">
               <h2 className="text-cyan-500 text-2xl font-bold text-center">
                 Register
@@ -36,6 +39,8 @@ const Register = () => {
                   type="name"
                   className="input-field"
                   placeholder="First Name"
+                  {...register("firstName")}
+                  required
                 />
               </div>
               <div className="col-span-6 md:col-span-3">
@@ -45,6 +50,8 @@ const Register = () => {
                   type="name"
                   className="input-field"
                   placeholder="Last Name"
+                  {...register("lastName")}
+                  required
                 />
               </div>
 
@@ -55,6 +62,8 @@ const Register = () => {
                   type="email"
                   className="input-field"
                   placeholder="Email Address"
+                  {...register("email")}
+                  required
                 />
               </div>
 
@@ -66,6 +75,8 @@ const Register = () => {
                   id="password"
                   className="input-field"
                   placeholder="Your Password"
+                  {...register("password")}
+                  minLength={6}
                 />
               </div>
             </div>
