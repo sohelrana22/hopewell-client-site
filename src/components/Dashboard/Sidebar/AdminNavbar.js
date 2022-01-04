@@ -10,12 +10,6 @@ export default function AdminNavbar({ showSidebar, setShowSidebar }) {
         <div className="container max-w-full mx-auto flex items-center justify-between md:pr-8 md:pl-10">
           <div className="md:hidden">
             <button
-              color="transparent"
-              buttonType="link"
-              size="lg"
-              iconOnly
-              rounded
-              ripple="light"
               onClick={() => setShowSidebar("left-0")}
             >
               <AiOutlineMenu/>
@@ -26,12 +20,6 @@ export default function AdminNavbar({ showSidebar, setShowSidebar }) {
               } z-50 transition-all duration-300`}
             >
               <button
-                color="transparent"
-                buttonType="link"
-                size="lg"
-                iconOnly
-                rounded
-                ripple="light"
                 onClick={() => setShowSidebar("-left-64")}
               >
                 <AiFillCloseCircle />

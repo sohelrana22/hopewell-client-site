@@ -6,6 +6,10 @@ import Register from "./components/Authorization/Login/Register";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AuthContext from "./context/AuthContext";
 import Dashboard from "./components/Dashboard/Dashboard";
+import MakeAdmin from "./components/Dashboard/MakeAdmin/MakeAdmin";
+import AddServices from "./components/Dashboard/AddServices/AddServices";
+import ManageAppoinment from "./components/Dashboard/ManageAppointMents/ManageAppoinment";
+import Payments from "./components/Dashboard/Payments/Payments";
 
 // // AOS Animation Init
 // AOS.init();
@@ -19,7 +23,14 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
-          <Route path="/dashboard" element={<Dashboard />}></Route>
+          {/* dashboard route  */}
+          <Route path="/dashboard/*" element={<Dashboard />}>
+            <Route path="makeadmin" element={<MakeAdmin />} />
+            <Route path="addservices" element={<AddServices />} />
+            <Route path="manageappoinment" element={<ManageAppoinment />} />
+            <Route path="payments" element={<Payments />} />
+          </Route>
+          {/* dashboard route ends  */}
         </Routes>
       </BrowserRouter>
     </AuthContext>
