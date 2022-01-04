@@ -12,7 +12,7 @@ const Register = () => {
   const redirectUrl = location.state?.from?.pathname || "/";
   const onSubmit = (data) => {
     const userdata = {
-      name: data.firstName + data.lastName,
+      name: data.firstName + " " + data.lastName,
       email: data.email,
       password: data.password,
     };

@@ -17,7 +17,7 @@ import {
 import axios from "axios";
 import initializeFirebase from "../components/Firebase/firebase.init";
 
-initializeFirebase()
+initializeFirebase();
 const useFirebase = () => {
   const [user, setUser] = useState(null);
   const [authError, setAuthError] = useState(null);
@@ -68,7 +68,7 @@ const useFirebase = () => {
   };
   const saveUserToDb = (email, displayName) => {
     const newuser = { email, displayName };
-    fetch("https://pacific-savannah-45002.herokuapp.com/adduser", {
+    fetch("http://localhost:5000/adduser", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -79,6 +79,7 @@ const useFirebase = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
+        console.log(currentUser);
         setUser(currentUser);
         getIdToken(currentUser).then((idToken) => {
           setToken(idToken);
