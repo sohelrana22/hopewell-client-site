@@ -75,7 +75,11 @@ const Register = () => {
                 Register
               </button>
             </div>
-
+            {authError && (
+              <p className="text-md text-red-700 font-bold text-center">
+                {authError}
+              </p>
+            )}
             <p className="text-center">
               Already registered?
               <Link
