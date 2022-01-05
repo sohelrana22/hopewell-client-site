@@ -137,7 +137,7 @@ const Footer = () => {
               rel="noreferrer"
               className="ml-1 font-bold text-cyan-500"
             >
-              Mubhassir | Sohel | Ruhul | Showvro
+              Mubasshir | Sohel | Ruhul | Showvro
             </a>
           </p>
         </div>

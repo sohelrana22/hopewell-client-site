@@ -67,6 +67,16 @@ const Navbar = () => {
                   >
                     CONTACT
                   </NavLink>
+                  <NavLink
+                    to="/about"
+                    className={(navLink) =>
+                      navLink.isActive
+                        ? "btn btn-nav-active"
+                        : "btn btn-nav-hover"
+                    }
+                  >
+                    ABOUT
+                  </NavLink>
                   <Link
                     to="/"
                     className="btn btn-nav-active btn-nav-toggler-active"
@@ -184,6 +194,16 @@ const Navbar = () => {
                 }
               >
                 CONTACT
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={(navLink) =>
+                  navLink.isActive
+                    ? "btn btn-nav-toggler-active"
+                    : "btn btn-nav-toggler-hover"
+                }
+              >
+                ABOUT
               </NavLink>
               <Link
                 to="/"
