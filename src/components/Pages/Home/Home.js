@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Career from "../Career/Career";
 
 const Home = () => {
   //Dynamic Title
@@ -8,7 +9,8 @@ const Home = () => {
 
   return (
     <div>
-      <h1>This is home page</h1>
+      
+      <Career/>
     </div>
   );
 };
