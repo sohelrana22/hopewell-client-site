@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
+import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
+import Banner from "./Carousel/Banner";
+import FAQ from "./FAQ/FAQ";
+import Feature from "./Feature/Feature";
+import Partner from "./Partners/Partners";
+import Trends from "./Trends/Trends";
 
 const Home = () => {
   //Dynamic Title
@@ -10,7 +16,12 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <h1>This is home page</h1>
+      <Banner />
+      <Feature />
+      <FAQ />
+      <Trends />
+      <Partner />
+      <Footer />
     </>
   );
 };

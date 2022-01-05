@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import Logo from "../../../assets/images/hopewell.png";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
-      <nav className="bg-gray-100 shadow-lg">
+    <>
+      <nav className="bg-white shadow-lg sticky-top border-b-4 border-cyan-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -16,37 +17,71 @@ const Navbar = () => {
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <a href="#" className="btn btn-nav">
+                  <NavLink
+                    to="/"
+                    className={(navLink) =>
+                      navLink.isActive
+                        ? "btn btn-nav-active"
+                        : "btn btn-nav-hover"
+                    }
+                  >
                     HOME
-                  </a>
-
-                  <a href="#" className="btn btn-nav">
+                  </NavLink>
+                  <NavLink
+                    to="/doctor"
+                    className={(navLink) =>
+                      navLink.isActive
+                        ? "btn btn-nav-active"
+                        : "btn btn-nav-hover"
+                    }
+                  >
                     DOCTORS
-                  </a>
-
-                  <a href="#" className="btn btn-nav">
+                  </NavLink>
+                  <NavLink
+                    to="/appointment"
+                    className={(navLink) =>
+                      navLink.isActive
+                        ? "btn btn-nav-active"
+                        : "btn btn-nav-hover"
+                    }
+                  >
                     APPOINTMENTS
-                  </a>
-
-                  <a href="#" className="btn btn-nav">
+                  </NavLink>
+                  <NavLink
+                    to="/blog"
+                    className={(navLink) =>
+                      navLink.isActive
+                        ? "btn btn-nav-active"
+                        : "btn btn-nav-hover"
+                    }
+                  >
                     BLOG
-                  </a>
-
-                  <a href="#" className="btn btn-nav">
-                    CARRIER
-                  </a>
-
-                  <a href="#" className="btn btn-nav">
+                  </NavLink>
+                  <NavLink
+                    to="/contact"
+                    className={(navLink) =>
+                      navLink.isActive
+                        ? "btn btn-nav-active"
+                        : "btn btn-nav-hover"
+                    }
+                  >
                     CONTACT
-                  </a>
+                  </NavLink>
+                  <Link
+                    to="/"
+                    className="btn btn-nav-active btn-nav-toggler-active"
+                  >
+                    LOGOUT
+                  </Link>
                 </div>
               </div>
             </div>
+
             <div className="-mr-2 flex md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-cyan-300 hover:text-cyan-500 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -98,38 +133,69 @@ const Navbar = () => {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          {(ref) => (
-            <div className="md:hidden" id="mobile-menu">
-              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#" className="btn btn-nav-toggler">
-                  HOME
-                </a>
-
-                <a href="#" className="btn btn-nav-toggler">
-                  DOCTORS
-                </a>
-
-                <a href="#" className="btn btn-nav-toggler">
-                  APPOINTMENTS
-                </a>
-
-                <a href="#" className="btn btn-nav-toggler">
-                  BLOGS
-                </a>
-
-                <a href="#" className="btn btn-nav-toggler">
-                  CARRIER
-                </a>
-
-                <a href="#" className="btn btn-nav-toggler">
-                  CONTACT
-                </a>
-              </div>
+          <div className="md:hidden" id="mobile-menu">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <NavLink
+                to="/"
+                className={(navLink) =>
+                  navLink.isActive
+                    ? "btn btn-nav-toggler-active"
+                    : "btn btn-nav-toggler-hover"
+                }
+              >
+                HOME
+              </NavLink>
+              <NavLink
+                to="/doctor"
+                className={(navLink) =>
+                  navLink.isActive
+                    ? "btn btn-nav-toggler-active"
+                    : "btn btn-nav-toggler-hover"
+                }
+              >
+                DOCTORS
+              </NavLink>
+              <NavLink
+                to="/appointment"
+                className={(navLink) =>
+                  navLink.isActive
+                    ? "btn btn-nav-toggler-active"
+                    : "btn btn-nav-toggler-hover"
+                }
+              >
+                APPOINTMENTS
+              </NavLink>
+              <NavLink
+                to="/blog"
+                className={(navLink) =>
+                  navLink.isActive
+                    ? "btn btn-nav-toggler-active"
+                    : "btn btn-nav-toggler-hover"
+                }
+              >
+                BLOG
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className={(navLink) =>
+                  navLink.isActive
+                    ? "btn btn-nav-toggler-active"
+                    : "btn btn-nav-toggler-hover"
+                }
+              >
+                CONTACT
+              </NavLink>
+              <Link
+                to="/"
+                className="btn btn-nav-active btn-nav-toggler-active"
+              >
+                LOGOUT
+              </Link>
             </div>
-          )}
+          </div>
         </Transition>
       </nav>
-    </div>
+    </>
   );
 };
 
