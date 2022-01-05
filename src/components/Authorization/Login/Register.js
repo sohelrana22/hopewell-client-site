@@ -1,29 +1,10 @@
 import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
 import { GrClose } from "react-icons/gr";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import useAuth from "../../../hooks/useAuth";
+import { Link,  useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const { register, handleSubmit } = useForm();
-  const { registerUser, authError } = useAuth();
-  const location = useLocation();
   const navigate = useNavigate();
-  const redirectUrl = location.state?.from?.pathname || "/";
-  const onSubmit = (data) => {
-    const userdata = {
-      name: data.firstName + " " + data.lastName,
-      email: data.email,
-      password: data.password,
-    };
-    registerUser(
-      userdata.email,
-      userdata.password,
-      userdata.name,
-      navigate,
-      redirectUrl
-    );
-  };
+
   //Dynamic Title
   useEffect(() => {
     document.title = "Register | Hopewell Hospital";
@@ -39,7 +20,7 @@ const Register = () => {
           >
             <GrClose size="1.5em" />
           </div>
-          <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
+          <form className="space-y-6">
             <div className="">
               <h2 className="text-cyan-500 text-2xl font-bold text-center">
                 Register
@@ -55,8 +36,6 @@ const Register = () => {
                   type="name"
                   className="input-field"
                   placeholder="First Name"
-                  {...register("firstName")}
-                  required
                 />
               </div>
               <div className="col-span-6 md:col-span-3">
@@ -66,8 +45,6 @@ const Register = () => {
                   type="name"
                   className="input-field"
                   placeholder="Last Name"
-                  {...register("lastName")}
-                  required
                 />
               </div>
 
@@ -78,8 +55,6 @@ const Register = () => {
                   type="email"
                   className="input-field"
                   placeholder="Email Address"
-                  {...register("email")}
-                  required
                 />
               </div>
 
@@ -91,8 +66,6 @@ const Register = () => {
                   id="password"
                   className="input-field"
                   placeholder="Your Password"
-                  {...register("password")}
-                  minLength={6}
                 />
               </div>
             </div>

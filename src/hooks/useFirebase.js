@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import {
   getAuth,
@@ -12,8 +13,11 @@ import {
 import axios from "axios";
 import initializeFirebase from "../components/Firebase/firebase.init";
 
-initializeFirebase();
+import React from "react";
+
+
 const useFirebase = () => {
+
   const [user, setUser] = useState(null);
   const [authError, setAuthError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -100,6 +104,13 @@ const useFirebase = () => {
     token,
     loading,
   };
+
+  return (
+    <div>
+      <h1>Use Firebase part</h1>
+    </div>
+  );
+
 };
 
 export default useFirebase;

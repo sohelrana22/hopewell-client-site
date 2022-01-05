@@ -3,6 +3,23 @@ import Home from "./components/Pages/Home/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Contact from "./components/Pages/Contact/Contact";
 import NotFound from "./components/Pages/NotFound/NotFound";
+<<<<<<< HEAD
+import About from "./components/Pages/About/About";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+=======
 import AuthContext from "./context/AuthContext";
 import Login from "./components/Authorization/Login/Login";
 import Register from "./components/Authorization/Login/Register";
@@ -12,6 +29,7 @@ import AddServices from "./components/Dashboard/AddServices/AddServices";
 import ManageAppoinment from "./components/Dashboard/ManageAppointMents/ManageAppoinment";
 import Payments from "./components/Dashboard/Payments/Payments";
 import MyCarts from "./components/Dashboard/MyCarts/MyCarts";
+import Doctors from "./components/Pages/Doctors/Doctors";
 
 function App() {
   return (
@@ -23,6 +41,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/doctors" element={<Doctors/>} />
           {/* dashboard route  */}
           <Route path="/dashboard/*" element={<Dashboard />}>
             <Route path="makeadmin" element={<MakeAdmin />} />
@@ -36,6 +55,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </AuthContext>
+>>>>>>> 81faef4b8f47eff9c4d845b32667b71a8d92403b
   );
 }
 
