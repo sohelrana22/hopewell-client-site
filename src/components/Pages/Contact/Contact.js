@@ -124,7 +124,7 @@ const Contact = () => {
                 545, Street 11, Block F <br />
                 Dhaka, Bangladesh
               </p>
-              <a href="javascript:void(0)">
+              <a href="/">
                 <p className="text-white pt-16 font-semibold underline">
                   View our Job Openings
                 </p>

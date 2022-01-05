@@ -45,7 +45,7 @@ const Login = () => {
                   id="password"
                   type="password"
                   name="password"
-                  placeholder="12345"
+                  
                   className="input-field"
                   placeholder="Your Password"
                 />
