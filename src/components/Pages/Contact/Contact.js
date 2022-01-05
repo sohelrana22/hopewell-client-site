@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="lg:flex">
           <div className="xl:w-3/5 lg:w-3/5 h-full pt-5 pb-5 xl:pr-5 xl:pl-0">
-            <form onSubmit="" id="contact" className="bg-white py-4 px-8">
+            <form id="contact" className="bg-white py-4 px-8">
               <h1 className="text-4xl text-gray-800 font-semibold mb-6">
                 Enter Your Details
               </h1>
@@ -28,7 +28,7 @@ const Contact = () => {
                       id="full_name"
                       name="full_name"
                       type="text"
-                      className="focus:outline-none focus:border focus:border-cyan-500 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 border"
+                      className="focus:outline-none focus:border focus:border-cyan-500 font-normal w-72 h-10 flex items-center pl-3 text-sm border-gray-300 border"
                       placeholder="Full Name"
                     />
                   </div>
@@ -46,7 +46,7 @@ const Contact = () => {
                       id="email"
                       name="email"
                       type="email"
-                      className="focus:outline-none focus:border focus:border-cyan-500 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 border"
+                      className="focus:outline-none focus:border focus:border-cyan-500 font-normal w-72 h-10 flex items-center pl-3 text-sm border-gray-300 border"
                       placeholder="Your Email"
                     />
                   </div>

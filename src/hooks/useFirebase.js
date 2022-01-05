@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import {
   getAuth,
@@ -8,24 +9,21 @@ import {
   getIdToken,
   updateProfile,
 } from "firebase/auth";
-import {
-  getStorage,
-  ref,
-  uploadBytesResumable,
-  getDownloadURL,
-} from "firebase/storage";
+
 import axios from "axios";
 import initializeFirebase from "../components/Firebase/firebase.init";
 
-initializeFirebase();
+import React from "react";
+
+
 const useFirebase = () => {
+
   const [user, setUser] = useState(null);
   const [authError, setAuthError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [admin, setAdmin] = useState(false);
   const [token, setToken] = useState("");
   const auth = getAuth();
-  const storage = getStorage();
   const registerUser = (email, password, name, navigate, url) => {
     setLoading(true);
     setUser({ email: email, displayName: name });
@@ -92,13 +90,9 @@ const useFirebase = () => {
     return () => unsubscribe;
   }, []);
   useEffect(() => {
-    axios
-      .get(
-        `https://pacific-savannah-45002.herokuapp.com/getAdmin/${user?.email}`
-      )
-      .then((result) => {
-        setAdmin(result.data.admin);
-      });
+    axios.get(`http://localhost:5000/${user?.email}`).then((result) => {
+      setAdmin(result.data.admin);
+    });
   }, [user, admin]);
   return {
     registerUser,
@@ -109,11 +103,14 @@ const useFirebase = () => {
     admin,
     token,
     loading,
-    storage,
-    ref,
-    uploadBytesResumable,
-    getDownloadURL,
   };
+
+  return (
+    <div>
+      <h1>Use Firebase part</h1>
+    </div>
+  );
+
 };
 
 export default useFirebase;
