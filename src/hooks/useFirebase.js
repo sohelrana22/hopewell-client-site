@@ -92,13 +92,9 @@ const useFirebase = () => {
     return () => unsubscribe;
   }, []);
   useEffect(() => {
-    axios
-      .get(
-        `https://pacific-savannah-45002.herokuapp.com/getAdmin/${user?.email}`
-      )
-      .then((result) => {
-        setAdmin(result.data.admin);
-      });
+    axios.get(`http://localhost:5000/${user?.email}`).then((result) => {
+      setAdmin(result.data.admin);
+    });
   }, [user, admin]);
   return {
     registerUser,
