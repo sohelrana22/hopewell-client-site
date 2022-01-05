@@ -1,7 +1,4 @@
 import React, { useEffect } from "react";
-
-import Career from "../Career/Career";
-
 import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
 import Banner from "./Carousel/Banner";
@@ -10,7 +7,6 @@ import Feature from "./Feature/Feature";
 import Partner from "./Partners/Partners";
 import Trends from "./Trends/Trends";
 
-
 const Home = () => {
   //Dynamic Title
   useEffect(() => {
@@ -18,7 +14,6 @@ const Home = () => {
   }, []);
 
   return (
-
     <>
       <Navbar />
       <Banner />
@@ -28,7 +23,6 @@ const Home = () => {
       <Partner />
       <Footer />
     </>
-
   );
 };
 
