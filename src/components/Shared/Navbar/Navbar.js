@@ -29,7 +29,7 @@ const Navbar = () => {
                     HOME
                   </NavLink>
                   <NavLink
-                    to="/doctors"
+                    to="/doctor"
                     className={(navLink) =>
                       navLink.isActive
                         ? "btn btn-nav-active"
