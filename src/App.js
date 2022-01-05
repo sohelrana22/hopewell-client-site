@@ -10,6 +10,7 @@ import MakeAdmin from "./components/Dashboard/MakeAdmin/MakeAdmin";
 import AddServices from "./components/Dashboard/AddServices/AddServices";
 import ManageAppoinment from "./components/Dashboard/ManageAppointMents/ManageAppoinment";
 import Payments from "./components/Dashboard/Payments/Payments";
+import MyCarts from "./components/Dashboard/MyCarts/MyCarts";
 
 // // AOS Animation Init
 // AOS.init();
@@ -29,6 +30,7 @@ function App() {
             <Route path="addservices" element={<AddServices />} />
             <Route path="manageappoinment" element={<ManageAppoinment />} />
             <Route path="payments" element={<Payments />} />
+            <Route path="mycarts" element={<MyCarts />} />
           </Route>
           {/* dashboard route ends  */}
         </Routes>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   MdOutlineDashboardCustomize,
   MdPayment,
@@ -74,6 +74,32 @@ export default function Sidebar() {
                 >
                   <MdOutlineAdminPanelSettings />
                   Make Admin
+                </NavLink>
+              </li>
+              <li className="rounded-lg mb-2 text-gray-700">
+                <NavLink
+                  to="/dashboard/manageappoinment"
+                  className={({ isActive }) =>
+                    !isActive
+                      ? "flex items-center gap-4 text-md text-gray-700 font-light px-4 py-3 rounded-lg"
+                      : "flex items-center gap-4 text-md text-blue-400 font-light px-4 py-3 rounded-lg"
+                  }
+                >
+                  <MdOutlineAdminPanelSettings />
+                  Manage AP
+                </NavLink>
+              </li>
+              <li className="rounded-lg mb-2 text-gray-700">
+                <NavLink
+                  to="/dashboard/adservices"
+                  className={({ isActive }) =>
+                    !isActive
+                      ? "flex items-center gap-4 text-md text-gray-700 font-light px-4 py-3 rounded-lg"
+                      : "flex items-center gap-4 text-md text-blue-400 font-light px-4 py-3 rounded-lg"
+                  }
+                >
+                  <MdOutlineAdminPanelSettings />
+                  Add Service
                 </NavLink>
               </li>
             </ul>
