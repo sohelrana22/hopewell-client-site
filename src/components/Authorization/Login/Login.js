@@ -1,23 +1,15 @@
 import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
 import { GrClose } from "react-icons/gr";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import useAuth from "../../../hooks/useAuth";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const { register, handleSubmit } = useForm();
-  const { authError, LoginUser } = useAuth();
-  const location = useLocation();
   const navigate = useNavigate();
-  const redirectUrl = location.state?.from?.pathname || "/";
-  const onSubmit = (data) => {
-    console.log(data);
-    LoginUser(data.email, data.password, navigate, redirectUrl);
-  };
+
   //Dynamic Title
   useEffect(() => {
     document.title = "Login | Hopewell Hospital";
   }, []);
+
   return (
     <div className="bg-cyan-50 ">
       <div className="flex items-center justify-center min-h-screen">
@@ -28,7 +20,7 @@ const Login = () => {
           >
             <GrClose size="1.5em" className="text-cyan-500" />
           </div>
-          <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
+          <form className="space-y-6">
             <div className="">
               <h2 className="text-cyan-500 text-2xl font-bold text-center">
                 Login
@@ -44,21 +36,18 @@ const Login = () => {
                   type="email"
                   className="input-field"
                   placeholder="Your Email"
-                  {...register("email")}
-                  required
                 />
               </div>
 
               <div className="relative col-span-6">
                 <input
+                  required
                   id="password"
                   type="password"
                   name="password"
                   placeholder="12345"
                   className="input-field"
                   placeholder="Your Password"
-                  {...register("password")}
-                  minLength={6}
                 />
               </div>
             </div>
@@ -78,9 +67,6 @@ const Login = () => {
                 Create new one
               </Link>
             </p>
-            {authError && (
-              <p className="text-center text-red-600">{authError}</p>
-            )}
           </form>
         </div>
       </div>
