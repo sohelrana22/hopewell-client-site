@@ -8,12 +8,7 @@ import {
   getIdToken,
   updateProfile,
 } from "firebase/auth";
-import {
-  getStorage,
-  ref,
-  uploadBytesResumable,
-  getDownloadURL,
-} from "firebase/storage";
+
 import axios from "axios";
 import initializeFirebase from "../components/Firebase/firebase.init";
 
@@ -25,7 +20,6 @@ const useFirebase = () => {
   const [admin, setAdmin] = useState(false);
   const [token, setToken] = useState("");
   const auth = getAuth();
-  const storage = getStorage();
   const registerUser = (email, password, name, navigate, url) => {
     setLoading(true);
     setUser({ email: email, displayName: name });
@@ -105,10 +99,6 @@ const useFirebase = () => {
     admin,
     token,
     loading,
-    storage,
-    ref,
-    uploadBytesResumable,
-    getDownloadURL,
   };
 };
 
