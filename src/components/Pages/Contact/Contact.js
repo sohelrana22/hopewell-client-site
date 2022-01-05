@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../Shared/Navbar/Navbar";
 import { MdOutlineWifiCalling3, MdOutlineEmail } from "react-icons/md";
+import Footer from "../../Shared/Footer/Footer";
 
 const Contact = () => {
   return (
@@ -132,6 +133,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
