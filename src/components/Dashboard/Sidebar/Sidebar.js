@@ -60,7 +60,7 @@ export default function Sidebar() {
                   }
                 >
                   <MdShoppingCart />
-                  MyCarts
+                  Manage AP
                 </NavLink>
               </li>
               <li className="rounded-lg mb-2 text-gray-700">
@@ -86,7 +86,7 @@ export default function Sidebar() {
                   }
                 >
                   <MdOutlineAdminPanelSettings />
-                  Manage AP
+                  Add Doctor
                 </NavLink>
               </li>
               <li className="rounded-lg mb-2 text-gray-700">
@@ -99,7 +99,7 @@ export default function Sidebar() {
                   }
                 >
                   <MdOutlineAdminPanelSettings />
-                  Add Service
+                  Add New Blog
                 </NavLink>
               </li>
             </ul>

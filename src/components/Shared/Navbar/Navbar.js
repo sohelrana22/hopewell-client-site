@@ -2,19 +2,20 @@ import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import Logo from "../../../assets/images/hopewell.png";
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { user, LogOut } = useAuth();
   return (
     <>
       <nav className="bg-white shadow-lg sticky-top border-b-4 border-cyan-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-              <div className="flex-shrink-0">
+              <NavLink to="/" className="flex-shrink-0">
                 <img className="h-24" src={Logo} alt="Brand Logo" />
-              </div>
+              </NavLink>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <NavLink
@@ -67,12 +68,22 @@ const Navbar = () => {
                   >
                     CONTACT
                   </NavLink>
-                  <Link
-                    to="/"
-                    className="btn btn-nav-active btn-nav-toggler-active"
-                  >
-                    LOGOUT
-                  </Link>
+                  {user && <span>{user.displayName}</span>}
+                  {user ? (
+                    <button
+                      onClick={LogOut}
+                      className="btn btn-nav-active btn-nav-toggler-active"
+                    >
+                      LogOut
+                    </button>
+                  ) : (
+                    <Link
+                      to="/login"
+                      className="btn btn-nav-active btn-nav-toggler-active"
+                    >
+                      LOGIN
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

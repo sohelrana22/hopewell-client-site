@@ -16,31 +16,31 @@ const Trends = () => {
         <div className="flex flex-wrap items-center justify-center">
           <div className="p-4 lg:w-1/4 sm:w-1/2 w-full">
             <nav className="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>
                 Breast Cancer Types
               </a>
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>
                 Medicare Eligibility
               </a>
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>
                 Medicaid Eligibility
               </a>
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>
                 Pumpkin Health Benefits
               </a>
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>
@@ -50,31 +50,31 @@ const Trends = () => {
           </div>
           <div className="p-4 lg:w-1/4 sm:w-1/2 w-full">
             <nav className="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>
                 Gonorrhea
               </a>
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>
                 Covid-19 Vaccine
               </a>
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>
                 Flu Vaccine
               </a>
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>
                 Gluten-Free Diet
               </a>
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>
@@ -84,31 +84,31 @@ const Trends = () => {
           </div>
           <div className="p-4 lg:w-1/4 sm:w-1/2 w-full">
             <nav className="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>
                 Asthma in Cold Weather
               </a>
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>
                 Medicare Eligibility
               </a>
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>
                 Insurance Deadlines
               </a>
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>
                 Pumpkin Health Benefits
               </a>
-              <a>
+              <a href="/">
                 <span className="bg-cyan-100 text-cyan-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
                   <HiOutlineCheck />
                 </span>

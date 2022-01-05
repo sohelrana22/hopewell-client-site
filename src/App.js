@@ -3,7 +3,7 @@ import Home from "./components/Pages/Home/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Contact from "./components/Pages/Contact/Contact";
 import NotFound from "./components/Pages/NotFound/NotFound";
-import { AuthProvider } from "./context/AuthContext";
+import AuthContext from "./context/AuthContext";
 import Login from "./components/Authorization/Login/Login";
 import Register from "./components/Authorization/Login/Register";
 import Dashboard from "./components/Dashboard/Dashboard";
@@ -15,7 +15,7 @@ import MyCarts from "./components/Dashboard/MyCarts/MyCarts";
 
 function App() {
   return (
-    <AuthProvider>
+    <AuthContext>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,17 +25,17 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           {/* dashboard route  */}
           <Route path="/dashboard/*" element={<Dashboard />}>
-            <Route path="/makeadmin" element={<MakeAdmin />} />
-            <Route path="/addservices" element={<AddServices />} />
-            <Route path="/manageappoinment" element={<ManageAppoinment />} />
-            <Route path="/payments" element={<Payments />} />
-            <Route path="/mycarts" element={<MyCarts />} />
+            <Route path="makeadmin" element={<MakeAdmin />} />
+            <Route path="addservices" element={<AddServices />} />
+            <Route path="manageappoinment" element={<ManageAppoinment />} />
+            <Route path="payments" element={<Payments />} />
+            <Route path="mycarts" element={<MyCarts />} />
           </Route>
           {/* dashboard route ends  */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </AuthProvider>
+    </AuthContext>
   );
 }
 
