@@ -3,7 +3,7 @@ import Home from "./components/Pages/Home/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Contact from "./components/Pages/Contact/Contact";
 import NotFound from "./components/Pages/NotFound/NotFound";
-import AuthContext, { AuthProvider } from "./context/AuthContext";
+import AuthContext from "./context/AuthContext";
 import Login from "./components/Authorization/Login/Login";
 import Register from "./components/Authorization/Login/Register";
 import Dashboard from "./components/Dashboard/Dashboard";

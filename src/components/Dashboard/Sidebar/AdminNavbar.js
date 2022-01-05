@@ -1,9 +1,7 @@
-import { useLocation } from 'react-router-dom';
 
 import { AiFillCloseCircle, AiOutlineMenu } from "react-icons/ai";
 
 export default function AdminNavbar({ showSidebar, setShowSidebar }) {
-    const location = useLocation().pathname;
 
     return (
       <nav className="bg-blue-500 md:ml-64 py-6 px-3">
