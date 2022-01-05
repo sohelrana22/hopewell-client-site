@@ -29,7 +29,6 @@ import AddServices from "./components/Dashboard/AddServices/AddServices";
 import ManageAppoinment from "./components/Dashboard/ManageAppointMents/ManageAppoinment";
 import Payments from "./components/Dashboard/Payments/Payments";
 import MyCarts from "./components/Dashboard/MyCarts/MyCarts";
-import Doctors from "./components/Pages/Doctors/Doctors";
 
 function App() {
   return (
@@ -41,7 +40,6 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/doctors" element={<Doctors/>} />
           {/* dashboard route  */}
           <Route path="/dashboard/*" element={<Dashboard />}>
             <Route path="makeadmin" element={<MakeAdmin />} />
