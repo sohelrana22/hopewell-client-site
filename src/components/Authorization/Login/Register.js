@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { GrClose } from "react-icons/gr";
-import { Link,  useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const navigate = useNavigate();
+  const { navigate, authError } = useNavigate();
 
   //Dynamic Title
   useEffect(() => {
@@ -75,11 +75,7 @@ const Register = () => {
                 Register
               </button>
             </div>
-            {authError && (
-              <p className="text-md text-red-700 font-bold text-center">
-                {authError}
-              </p>
-            )}
+
             <p className="text-center">
               Already registered?
               <Link
